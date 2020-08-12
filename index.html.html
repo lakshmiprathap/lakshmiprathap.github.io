@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            word-wrap: break-word;
+        }
+
+        .height {
+            background-color: white;
+            padding: 10px;
+        }
+
+        .jumbotron {
+            padding: 8px 16px;
+            margin-bottom: 10px;
+        }
+
+        .year {
+            text-align: center;
+            border-bottom: 1px solid lightgrey;
+        }
+
+        .btn {
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 0px;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            padding: 10px 0px;
+
+        }
+
+        .img-bg {
+            display: flex;
+            justify-content: center;
+            align-content: center;
+            background-color: #e9ecef;
+        }
+
+
+        .inner {
+            margin: 10px
+        }
+
+        @media screen and (max-width:700px) {
+            .btn {
+                padding: 0px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media screen and (max-width:699px) and (min-width:400px) {
+            .btn {
+                padding: 8px !important;
+            }
+
+            img {
+                width: 70%;
+                height: auto;
+            }
+        }
+
+        @media screen and (min-width:700px) and (max-width:768px) {
+            .col-md-4 {
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            .col-md-8 {
+                flex: 0 0 66.666667%;
+                max-width: 66.666667%;
+            }
+        }
+
+        @media screen and (min-width:992px) and (max-width:1024px) {
+
+            .col-lg-3 {
+                flex: 0 0 33.333333%;
+                max-width: 33.333333%;
+            }
+
+            .col-lg-9 {
+                flex: 0 0 66.666667%;
+                max-width: 66.666667%;
+            }
+
+            .cls-1024 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        @media screen and (min-width:1200px) {
+
+            ul,
+            p,
+            h6 {
+                margin-bottom: 0px
+            }
+
+            img {
+                width: 50%;
+                height: auto;
+                padding: 10px 0px;
+            }
+        }
+
+        @media screen and (min-width:1440px) {
+            .container-fluid {
+                margin: auto;
+                max-width: 1440px;
+            }
+        }
+    </style>
+</head>
+
+<body onload="myFun()" style="background-color: #e9ecef;">
+
+    <div class="container-fluid">
+        <h2>SpaceX Launch Programs</h2>
+        <div class="row">
+            <div class="col-sm-12 col-md-4 col-lg-3">
+                <div class="jumbotron">
+                    <div class="height">
+                        <h3>Filters</h3>
+                        <div class="inner">
+                            <h5 class="year"> Launch Year</h5>
+                            <div class="row" style="text-align: center">
+                                <div class="col-6">
+                                    <div>
+                                        <button id="id-2006" type="button" class="btn btn-success" value="2006"
+                                            onclick="filter(this.value,'year')">
+                                            2006
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <button id="id-2008" type="button" class="btn btn-success" value="2008"
+                                            onclick="filter(this.value,'year')">
+                                            2008
+                                        </button>
+                                    </div>
+                                    <div>
+                                        <button id="id-2010" type="button" class="btn btn-success" value="2010"
+                                            onclick="filter(this.value,'year')">
+                                            2010
+                                        </button></div>
+                                    <div>
+                                        <button id="id-2012" type="button" class="btn btn-success" value="2012"
+                                            onclick="filter(this.value,'year')">
+                                            2012
+                                        </button></div>
+                                    <div>
+                                        <button id="id-2014" type="button" class="btn btn-success" value="2014"
+                                            onclick="filter(this.value,'year')">
+                                            2014
+                                        </button></div>
+                                    <div>
+                                        <button id="id-2016" type="button" class="btn btn-success" value="2016"
+                                            onclick="filter(this.value,'year')">
+                                            2016
+                                        </button></div>
+                                    <div>
+                                        <button id="id-2018" type="button" class="btn btn-success" value="2018"
+                                            onclick="filter(this.value,'year')">
+                                            2018
+                                        </button></div>
+                                    <div>
+                                        <button id="id-2020" type="button" class="btn btn-success" value="2020"
+                                            onclick="filter(this.value,'year')">
+                                            2020
+                                        </button></div>
+
+                                </div>
+                                <div class="col-6">
+                                    <div>
+                                        <button id="id-2007" type="button" class="btn btn-success" value="2007"
+                                            onclick="filter(this.value,'year')">
+                                            2007
+                                        </button></div>
+                                    <div>
+                                        <button id="id-2009" type="button" class="btn btn-success" value="2009"
+                                            onclick="filter(this.value,'year')">
+                                            2009
+                                        </button></div>
+                                    <div>
+                                        <button id="id-2011" type="button" class="btn btn-success" value="2011"
+                                            onclick="filter(this.value,'year')">
+                                            2011
+                                        </button></div>
+                                    <div>
+                                        <button id="id-2013" type="button" class="btn btn-success" value="2013"
+                                            onclick="filter(this.value,'year')">
+                                            2013
+                                        </button></div>
+                                    <div>
+                                        <button id="id-2015" type="button" class="btn btn-success" value="2015"
+                                            onclick="filter(this.value,'year')">
+                                            2015
+                                        </button></div>
+                                    <div>
+                                        <button id="id-2017" type="button" class="btn btn-success" value="2017"
+                                            onclick="filter(this.value,'year')">
+                                            2017
+                                        </button></div>
+                                    <div>
+                                        <button id="id-2019" type="button" class="btn btn-success" value="2019"
+                                            onclick="filter(this.value,'year')">
+                                            2019
+                                        </button></div>
+
+                                </div>
+
+                            </div>
+                            <h5 class="year">Successful Launch</h5>
+                            <div class="row" style="text-align: center">
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-success" value="true"
+                                        onclick="filter(this.value,'successfulLaunch')">
+                                        true
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-success" value="false"
+                                        onclick="filter(this.value,'successfulLaunch')">
+                                        false
+                                    </button>
+                                </div>
+
+                            </div>
+                            <h5 class="year">Successful Landing</h5>
+                            <div class="row" style="text-align: center">
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-success" value="true"
+                                        onclick="filter(this.value,'successfulLanding')">
+                                        true
+                                    </button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-success" value="false"
+                                        onclick="filter(this.value,'successfulLanding')">
+                                        false
+                                    </button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-8 col-lg-9">
+                <div class="row" id="flightList">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="spacex.js"></script>
+</body>
+
+</html>
